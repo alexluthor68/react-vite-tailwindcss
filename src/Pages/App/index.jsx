@@ -9,10 +9,12 @@ import './App.css'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    {
-      path: '/',
-      element: <Home />
-    }
+    { path: '/', element: <Home /> },
+    { path: '/MyAccount', element: <MyAccount /> },
+    { path: '/MyOrder', element: <MyOrder /> },
+    { path: '/MyOrders', element: <MyOrders /> },
+    { path: '/SignIn', element: <SignIn /> },
+    { path: '/*', element: <NotFound /> },
   ])
 
   return routes
@@ -21,7 +23,7 @@ const AppRoutes = () => {
 const App = () => {  
    return (   
      <BrowserRouter>
-      <AppRoutes />
+        <AppRoutes />
      </BrowserRouter>     
     )
 }
