@@ -5,7 +5,7 @@ import OrderCard from '../../Components/OrderCard'
 import './styles.css'
 
 const CheckoutSideMenu = () => {
-    const context = useContext(ShoppingCartContext)
+    const context = useContext(ShoppingCartContext)    
         
     return (
         <aside className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} checkout-side-menu flex-col fixed right-0 bg-white border border-black rounded-lg`}>
@@ -18,7 +18,7 @@ const CheckoutSideMenu = () => {
                     </XMarkIcon>
                 </div>
             </div>
-            <div className='px-6'>
+            <div className='px-6 overflow-y-scroll'>
                 {
                 context.cartProducts.map(product => (
                     <OrderCard
