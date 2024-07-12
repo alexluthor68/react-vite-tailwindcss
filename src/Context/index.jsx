@@ -39,10 +39,8 @@ export const ShoppingCartProvider = ({ children }) => {
 
     useEffect(() => {  
         if (searchByTitle) setFilteredItems(filteredItemsByTitle(items, searchByTitle))
-    }, [items, searchByTitle])
+    }, [items, searchByTitle])   
     
-    console.log('filteredItems: ', filteredItems)
-
     return (
         <ShoppingCartContext.Provider value={{
             count,
